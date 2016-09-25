@@ -10,7 +10,7 @@ $(function(){
 		step: 1,
 		slide: function(event, ui) { 
 			$("#preview").css({"width": ui.value + 'px'});
-		} 
+		}
 	});
     $("#height").slider({
 		value: 100,
@@ -37,6 +37,15 @@ $(function(){
 		step: 1,
 		slide: function(event, ui) { 
 			$("#preview").css({"border-width": ui.value + 'px'});
+		} 
+	});
+    $("#borderr").slider({
+		value: 0,
+		max: 50,
+		min: 0,
+		step: 1,
+		slide: function(event, ui) { 
+			$("#preview").css({"border-radius": ui.value + '%'}); 
 		} 
 	});
     $("#sombrasx").slider({
@@ -66,8 +75,27 @@ $(function(){
 			sombrasBlur = ui.value;
 		} 
 	});
+	
+	$("div[name='mudador']").each(function (i,v) {
+		$(this).dblclick(function() {
+			var ht = $(this).slider();
+			var ssss = ht.slider('option', 'value');
+			var valor = prompt("Novo valor (Atual: " +  ssss +"):");
+			if (valor === "") {
+			} else if (valor) {
+				if(eNumero(valor) == true) {
+					hs=$(this).slider();
+					hs.slider('option', 'value', valor);
+					hs.slider('option','slide')
+						.call(hs,null,{ handle: $('.ui-slider-handle', hs), value: valor });
+				}
+			} else {
+			}
+		});
+	});
+	$("#previewPlace").draggable();
 });
-setInterval(cor, 10);
+setInterval(cor, 1);
 setInterval(codigo, 1000);
 function cor() {
 	$("#bgc").css({'background-color': '#' + $("#bgc").val()})
@@ -96,4 +124,8 @@ function codigo() {
 
 function substituirTudo(str, achar, substituir) {
   return str.replace(new RegExp(achar, 'g'), substituir);
+}
+
+function eNumero(num){
+    return !isNaN(num)
 }
