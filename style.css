@@ -88,8 +88,13 @@ tr {
   height: 100px;
   width: 100px;
   border: 1px solid;
-  margin-left: auto;
-  margin-right: auto;
+  cursor: grab;
+}
+
+#previewPlace {
+	cursor: grab;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #codigo {
