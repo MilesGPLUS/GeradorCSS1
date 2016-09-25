@@ -1,0 +1,106 @@
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+tr {
+	margin-top: 15px;
+}
+
+#selectF {
+	height: 32px;
+	float: left;
+}
+
+#texto {
+	height: 26px;
+	width: 44px;
+	float: left;
+	margin-left: 5px;
+}
+
+#selectB {
+	height: 32px;
+}
+
+#bgcontainer {
+	min-width: 30px;
+	max-width: 70px;
+	height: 30px;
+	padding: 5px;
+	background-color: white;
+}
+
+#bgc {
+	color : transparent;
+	border: none;
+	outline: none;
+	border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px;
+}
+
+#bordasc {
+	color : transparent;
+	border: none;
+	outline: none;
+	border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px;
+}
+
+#sombrasc {
+	color : transparent;
+	border: none;
+	outline: none;
+	border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px;
+}
+
+#tgc {
+	color : transparent;
+	border: none;
+	outline: none;
+	border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px;
+}
+
+#editor {
+	height: 100%;
+}
+
+#config {
+  width: 400px;
+  height: 500px;
+  border: 1px solid rgba(224,224,224,1);
+  color: rgba(0,0,0,0.9);
+  background: rgba(229,229,229,1);
+  padding: 20px;
+  float: left;
+}
+
+#previewContainer {
+  width: 700px;
+  height: 500px;
+  border: 1px solid rgba(224,224,224,1);
+  color: rgba(0,0,0,0.9);
+  background-image: url(https://images2.pixlis.com/background-image-checkers-chequered-checkered-squares-seamless-tileable-grey-nurse-dark-gray-23689q.png);
+  background-size: 200px 200px;
+  padding: 20px;
+  float: left;
+  overflow: scroll;
+}
+
+#preview {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#codigo {
+	background-color: rgb(178, 178, 178);
+	color: rgb(0, 0, 0);
+	border-color: rgb(188, 188, 188);
+	border-style: solid;
+	border-width: 2px;
+	width: 1100px;
+	padding: 40px;
+	height: 500px; 
+	font-size: 16px;
+	float: left;
+}
