@@ -6,7 +6,34 @@ tr {
 	margin-top: 15px;
 }
 
+hr {
+	opacity: 0.5;
+}
+
+#editorcontainer {
+	width: auto;
+	max-height: 100%;
+}
+
+.valores {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border-color: rgb(171, 171, 171);
+	border-style: solid;
+	border-width: 1px;
+	width: 46px;
+	height: 28px;
+	text-align: center;
+	margin-top: 5px;
+}
+
 #selectF {
+	height: 32px;
+	float: left;
+}
+
+#selectRB {
+	margin-top: 5px;
 	height: 32px;
 	float: left;
 }
@@ -20,6 +47,7 @@ tr {
 
 #selectB {
 	height: 32px;
+	margin-left: 5px;
 }
 
 #bgcontainer {
@@ -64,7 +92,7 @@ tr {
 
 #config {
   width: 400px;
-  height: 500px;
+  height: 600px;
   border: 1px solid rgba(224,224,224,1);
   color: rgba(0,0,0,0.9);
   background: rgba(229,229,229,1);
@@ -74,7 +102,7 @@ tr {
 
 #previewContainer {
   width: 700px;
-  height: 500px;
+  height: 600px;
   border: 1px solid rgba(224,224,224,1);
   color: rgba(0,0,0,0.9);
   background-image: url(https://images2.pixlis.com/background-image-checkers-chequered-checkered-squares-seamless-tileable-grey-nurse-dark-gray-23689q.png);
@@ -98,14 +126,14 @@ tr {
 }
 
 #codigo {
-	background-color: rgb(178, 178, 178);
+	background-color: rgb(255, 255, 255);
 	color: rgb(0, 0, 0);
 	border-color: rgb(188, 188, 188);
 	border-style: solid;
 	border-width: 2px;
-	width: 1100px;
-	padding: 40px;
-	height: 500px; 
+	width: 100%;
+	height: 100%; 
 	font-size: 16px;
 	float: left;
+	resize: none;
 }

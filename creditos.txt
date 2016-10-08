@@ -1,0 +1,2 @@
+﻿<b>Feito por Miles @ 2016</b>
+<p>Gerador criado no intuito de fácilitar o uso de CSS, inspirado em um antigo gerador <a href="http://in-web.pl">cujo domínio expirou</a></p>

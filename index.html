@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -12,6 +12,7 @@
 		<link rel="shortcut icon" href="favicon.ico">
 	</head>
 	<body>
+<div id="editorcontainer">
 	<div id="config">
 		<div id="tabs">
 			<ul>
@@ -22,27 +23,30 @@
 			<div id="tabs-1">
 				<table style="width:100%">
 					<tr>
-						<label>Largura</label><br>
-						<div name="mudador" id="width"></div>
+						<pre style="margin-bottom: 0px; margin-top: 0px; font-size: 14px; font-family: Tahoma, Geneva, sans-serif;">Largura                                Altura</pre><br>
+						<div name="mudador" id="width" style="width: 48%; display: inline-block;"></div>
+						<div name="mudador" id="height" style="width: 48%; margin-left: 1%; display: inline-block;"></div>
+						<input value="0" class="valores" name="width" id="widthinput" style="width: 20%; float: left; margin-left: 10%;"></input>
+						<input value="0" class="valores" name="height" id="heightinput" style="width: 20%; float: left; margin-left: 30%;"></input>
 					</tr>
-					<tr>
-						<label>Altura</label>
-						<div name="mudador" id="height"></div>
-					</tr>
+					<br><br><br>
 					<tr>
 						<hr>
 					</tr>				
 					<tr>
 						<label>Padding</label>
 						<div name="mudador" id="padding"></div>
+						<input value="0" class="valores" name="padding" id="paddinginput" style="width: 20%; float: left; "></input><br><a>px</a>
 					</tr>
+					<br><br>
 					<tr>
 						<hr>
 					</tr>
 					<tr>
 						<label>Bordas</label>
-						<div name="mudador" id="border"></div><br>
-						<input value="000" id="bordasc" style="width: 30px; height: 30px; top: 0; left: 0;" type="text" data-wheelcolorpicker />
+						<div name="mudador" id="border"></div><br>	
+						<input value="0" class="valores" name="border" id="bordasinput" style="width: 20%; float: left; "></input>		
+						<input value="000" id="bordasc" style="width: 30px; height: 30px; top: 0; left: 0; margin-top: 4px; margin-left: 5px;" type="text" data-wheelcolorpicker />
 						<select id="selectB">
 							<option value="solid">Solid</option>
 							<option value="dotted">Dotted</option>
@@ -51,21 +55,20 @@
 							<option value="none">None</option>
 						</select>
 					</tr>
-					<br><br>
+					<hr>
 					<tr>
 						<label>Raio das bordas</label>
-						<div name="mudador" id="borderr"></div><br>
+						<div name="mudador" id="borderr"></div>
+						<input value="0" class="valores" name="borderr" id="raiobordasinput" style="width: 20%; float: left; "></input>
+						<select id="selectRB" style="margin-left: -1px;">
+							<option value="%">%</option>
+							<option value="px">px</option>
+						</select>
+						
+						<br><br>
 					</tr>
 					<tr>
 						<hr>
-					</tr>
-					<tr>
-						<label>Sombras</label><br>
-						<pre><label>X           Y            Blur         Cor</label></pre>
-						<div name="mudador" style="width: 20%; float: left;" id="sombrasx"></div>
-						<div name="mudador" style="width: 20%; float: left; margin-left: 20px" id="sombrasy"></div>
-						<div name="mudador" style="width: 20%; float: left; margin-left: 20px" id="sombrasblur"></div>
-						<input value="2e2e2e" id="sombrasc" style="width: 30px; height: 30px; float: left; margin-top: -10px; margin-left: 15px;" type="text" data-wheelcolorpicker />
 					</tr>
 				</table>
 			</div>
@@ -105,10 +108,24 @@
 						</select>
 						<input onchange="fontes($(this))" type="number" value="14" min="6" max="288" id="texto"></input><a style="">px</a>
 					</tr>
+					<br><br>
+					<hr>
+					<tr>
+						<label>Sombras</label><br>
+						<pre><label>X           Y            Blur         Cor</label></pre>
+						<div name="mudador" style="width: 20%; float: left;" id="sombrasx"></div>
+						<div name="mudador" style="width: 20%; float: left; margin-left: 20px" id="sombrasy"></div>
+						<div name="mudador" style="width: 20%; float: left; margin-left: 20px" id="sombrasblur"></div>
+						<input value="2e2e2e" id="sombrasc" style="width: 30px; height: 30px; float: left; margin-top: -10px; margin-left: 15px;" type="text" data-wheelcolorpicker /><br>
+						
+						<input value="0" class="valores" name="sombrasx" id="sombrasxinput" style="width: 20%; float: left; margin-left: -5px"></input>
+						<input value="0" class="valores" name="sombrasy" id="sombrasyinput" style="width: 20%; float: left; margin-left: 20px"></input>
+						<input value="0" class="valores" name="sombrasblur" id="sombrasblurinput" style="width: 20%; float: left; margin-left: 20px"></input>
+					</tr>
 				</table>
 			</div>
 			<div id="tabs-3">
-				<p>Criador: Miles<br><i>O principal motivo para a criação deste gerador de css foi a expiração do domínio onde um ótimo gerador de css ficava (http://in-web.pl).<br><br>Muitas funções faltam ainda, portanto este gerador terá atualizações frequentes. Talvez.......<br>...<br>Não espere isso.</i><br><br><br><br>Miles @ 2016 v1.2<br><br>Tecnologias usadas: jQuery, jQuery UI, Wheel Color Picker</p>
+				
 			</div>
 		</div>
 	</div>
@@ -117,6 +134,10 @@
 			<div id="preview">Lorem Ipsum</div>
 		</div>
 	</div>
-	<iframe id="codigo"></iframe>
+</div>
+	<button style="width: 1185px" id="openpopup">Código</button>
+	<div title="Código gerado" id="popup">
+		<textarea id="codigo" style="width: 100%; height: 100%"></textarea>
+	</div>
 	</body>
 </html>
